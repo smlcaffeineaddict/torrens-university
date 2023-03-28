@@ -1,0 +1,10 @@
+ [1]	Sparkle 			Fwooper		  	 Common		    260	220
+ [2]	Snooze  			Acromantula	 	 Epic		    347	357 
+ [3]	Birdie  			Jobberknoll		 Rare		    265	255
+ [4]	Darling 			Nundu		 	 Lengendary		413	391
+ [5]	Doe      			Porlock          Epic		    350	380
+ [6]	Yuuki		    	Kappa            Super Rare	   	350	340
+ [7]	Fish     			Shrake           Common		    250	240
+ [8]	Ghost	    		Lethifold        Legendary  	447	452
+ [9]	Wizzle			    Jarvey           Super Rare		290	250
+ [10]	Goldie 			    Golden Snidget	 Super Rare		345	335

@@ -1,0 +1,100 @@
+1
+Sparkle
+Fwooper
+A magical African bird with brightly-coloured feathers, which could include orange, pink, lime green and yellow. Listening to the Fwooper's high pitched, twittering song would drive the listener insane, so each bird must be sold with a Silencing Charm placed on it. The Charm had to be reinforced monthly, and a licence was required to own one of the birds.
+100	100
+10	90	20
+90	50	50
+260	220
+Common
+
+2
+Snooze
+Acromantula
+A giant magical species of spider native to the rainforests of Southeast Asia, particularly Borneo, where it inhabited dense jungles. Sporting eight black eyes (white if blind) and were typically covered in thick black hair, with a leg span that could reach up to fifteen feet.
+100	100
+90	80	75
+82	90	20
+347	357
+Epic
+
+3
+Birdie
+Jobberknoll
+A small, magical, blue speckled bird. The Jobberknoll never made any noise until the moment before it dies. It would then release a long scream, which consisted of every sound it ever heard backwards. It lived in northern Europe and North America and fed mainly on small insects.
+Jobberknoll feathers were used as potion ingredients in Truth serums and Memory Potions.
+100	100
+10	90	20
+95	80	50
+265	255
+Rare
+
+4
+Darling
+Nundu
+A large East African magical beast that resembled a leopard. It moved silently, despite its "gigantic" size and was considered by some to be the most dangerous creature alive. The breath of the Nundu was toxic and filled with disease so potent that it can wipe out entire villages of people.
+100	100
+88	90	70
+85	68	80
+410	388
+Legendary
+
+5
+Doe
+Porlock
+A small creature, reaching a height of two feet on average when they were fully grown, and covered in a large amount of rough, shaggy hair. They had a large nose, small arms ending in four stubby fingers, and they walked on two cloven hooves.
+70	100
+70	50	60
+80	80	90
+310	380
+Epic
+
+6
+Yuuki
+Kappa
+A Japanese water demon that fed on human blood. They were known for strangling humans that invaded their shallow ponds.
+100	100
+80	65	80
+75	55	50
+350	340
+Super Rare
+
+7
+Fish
+Shrake
+A magically-created species of fish, found in the Atlantic Ocean. The creature was covered in spines.The spines of the Shrake could be used as a potion ingredient.
+100	100
+50	50	50
+20	40	80
+250	240
+Common
+
+8
+Ghost
+Lethifold
+Also known as the Living Shroud, is a carnivorous and extremely dangerous magical beast. It is also considered a Dark creature because of its extremely aggressive and violent nature. The Lethifold resembled a black cloak roughly half an inch thick, and appeared slightly thicker if the creature had recently digested a victim. It glided along surfaces in an unknown form of locomotion in search of its prey, humans. It attacked at night, when the target was asleep, by suffocating and then digesting them.
+100	100
+98	90	88
+80	95	91
+447	452
+Legendary
+
+9
+Wizzle
+Jarvey
+A magical beast which resembled an overgrown ferret in appearance, and was commonly found in Great Britain, Ireland, and North America. Jarvey were particularly good at hunting Gnomes, and were sometimes employed to de-gnome a garden, although their methods were usually brutal.
+100	100
+40	90	20 
+90	50	50
+290	250
+Rare
+
+10
+Goldie
+Golden Snidget
+A small golden magical bird with fully rotational wings. Once common in northern Europe, but because of their aptitude at hiding and extreme speed that they used as their survival strategy to avoid predators.
+100	100
+25	100	35
+90	90	95
+345	335
+Super Rare
