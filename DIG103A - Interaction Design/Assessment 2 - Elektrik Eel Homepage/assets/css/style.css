@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 @font-face{
-    font-family: Electramaniacal;
-    src:url(assets/font/electramaniacal.ttf)
+    font-family: electramaniacal;
+    src: url(/assets/font/electramaniacal.woff)  format('truetype');
 }
 /* ================== Variable CSS ================== */
 :root {
@@ -23,11 +23,11 @@
 
     /* Font & Typography */
     /*.5rem = 8px | 1rem = 16px ...*/
-    --title-font: "Electramaniacal", sans-serif;
+    --title-font: "electramaniacal", sans-serif;
     --body-font: "Inria Sans", sans-serif;
     --biggest-font-size: 7rem;
     --h1-font-size: 1.8rem;
-    --h2-font-size: 1.6rem;
+    --h2-font-size: 1.7rem;
     --h3-font-size: 1.3rem;
     --normal-font-size: 0.938rem;
     --small-font-size: 0.813rem;
@@ -49,7 +49,7 @@
     :root {
         --biggest-font-size: 4.5rem;
         --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
+        --h2-font-size: 1.7rem;
         --h3-font-size: 1.25rem;
         --normal-font-size: 1.125rem;
         --small-font-size: .875rem;
@@ -360,7 +360,7 @@ img {
 .ticket__cta {
     display: flex;
     column-gap: 0.7rem;
-    justify-content: space-between;
+    justify-content: space-evenly;
     cursor: pointer;
 }
 
@@ -669,11 +669,11 @@ img {
 
 /* ============== TWITTER POST ============== */
 .twitter__container {
-display: flex;
-flex-direction: column;
-align-items: center;
-color: white;
-padding: 1.5em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 1.5em 0;
 
 }
 
@@ -795,6 +795,76 @@ padding: 1.5em 0;
 .link {
     color: rgb(0, 138, 216);
     cursor: pointer;
+}
+
+/* ============== NEWS & ARTICLES ============== */
+.news {
+    color:var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.news__title {
+    letter-spacing: 0.1rem;
+    font-size: var(--h2-font-size);
+}  
+
+.news__article-container{
+
+}
+
+.news__article {
+    margin: 1.2em;
+    padding: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-img {
+    width: 100%;
+    height: 170px;
+
+    background-color: var(--white-color);
+}
+
+.article_content {
+    padding: 1em 0;
+}
+
+.article__title {
+    font-size:1.5em;;
+    padding-bottom: 0.7em;
+    letter-spacing: 0.1rem;
+}
+
+.article__desc {
+    letter-spacing: 0.1rem;
+    font-size: var(--body-font)
+}
+
+.article__read-more {
+    color: var(--white-color);
+    text-decoration: underline;
+    width: 100%;
+    text-align: right;
+}
+
+.article__read-more:hover{
+    cursor: pointer;
+}
+
+.img-sml {
+    height: 140px;
+}
+
+.article-title-sml{
+    font-size: 1.3em;
+}
+
+.article-sml {
+    font-size: var(--smaller-font-size);
 }
 /* ============== FOOTER ============== */
 .footer{
