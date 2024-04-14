@@ -1,18 +1,19 @@
 /*=============== CUSTOM FONTS ===============*/
+
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-/*=============== CUSTOM FONTS ===============*/
-@font-face{
+@font-face {
   font-family: Electramaniacal;
-  src: url(/assets/font/electramaniacal.woff)  format('woff');
+  src: url(/assets/font/electramaniacal.woff) format('woff');
   font-weight: 100;
   font-style: normal;
 }
 
 /*=============== VARIABLES CSS ===============*/
+
 :root {
   --header-height: 4rem;
-    
+  
   --first-color: hsl(0, 0%, 0%);
   --first-color-alt: hsl(234, 100%,50%);
   --first-color-light: hsl(0, 100%, 50%);
@@ -23,10 +24,10 @@
   --body-color: hsl(0, 0%, 0%);
   --container-color: hsl(0, 0%, 100%);
   --shadow-color: hsla(0, 100%, 50%, .1);
-    
+  
   --animation-color: var(--body-color);
-    
-    /*========== Font and typography ==========*/
+  
+  /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --title-font: "Electramaniacal", sans-serif;
   --body-font: "Inria Sans", sans-serif;
@@ -63,69 +64,68 @@
 }
 
 /*=============== BASE ===============*/
+
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body,
-  input,
-  textarea,
-  button {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-  }
-  
-  body {
-    background-color: var(--body-color);
-    color: var(--text-color);
-    transition: background-color .4s;
-  }
-  
-  input,
-  button,
-  textarea {
-    border: none;
-    outline: none;
-  }
-  
-  h1, h2, h3, h4 {
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .bold{
-      font: var(--body-font);
-      color: var(--text-color);
-      font-weight: 700;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-  .button {
-    color: var(--white-color);
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  .button:hover {
-    color: var(--body-color)
-  }
+body,
+input,
+textarea,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+  
+.bold{
+  font: var(--body-font);
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.button {
+  color: var(--white-color);
+}
+
+.button:hover {
+ color: var(--body-color)
+}
 
   /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -263,18 +263,21 @@
     right: 1.5rem;
 }
 
- /*=============== HERO ===============*/
+/*=============== HERO ===============*/
+
 .hero {
   margin-inline: 0;
   padding-block: 0;
 }
 
 .hero-container {
-  background-image: url(/assets//img/aleksandr-popov-background.jpg);
+  background-image: url(/assets/img/aleksandr-popov-background.jpg);
   background-size: cover;
   height: auto;
   background-position: center;
 }
+
+/* Hero Logo & Content Styles */
 
 .hero-logo {
   height: 30rem;
@@ -284,7 +287,11 @@
   padding: 1.2em;
 }
 
-.hero-content{
+.logo__landscape {
+  width: 100%;
+}
+
+.hero-content {
   padding-top: 0.3em;
   padding-bottom: 0.6em;
   background-color: hsla(234, 100%,50%, 0.48);
@@ -294,11 +301,9 @@
 .hero-content-title-group {
   display: flex;
   flex-flow: row wrap;
-
   justify-content: left;
   align-items: center;
   column-gap: 0.7rem;
-  
 }
 
 .hero__title {
@@ -315,11 +320,11 @@
   font-weight: var(--font-semi-bold);
   font-size: 1.2em;
   line-height: 1.3;
-  
 }
- /*=============== ARTISTS ===============*/
+/*=============== ARTISTS ===============*/
+
 .rotate__artist {
-  margin-inline:0;
+  margin-inline: 0;
   padding-block: 0;
 }
 
@@ -329,148 +334,149 @@
 
 .rotate__artist-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 0.5em 0;
   color: var(--white-color);
 }
 
-.rotate__artist-name,
-.rotate__artist-dot{
-  padding: 0 0.4em;
-}
-
+/* Styles for both Artist Name and Dot */
 .rotate__artist-dot {
   font-size: 0.7em;
   align-self: center;
 }
 
-.rotate__artist-name {
+.rotate__artist-name,
+.rotate__artist-dot-name {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: var(--font-medium);
   font-size: 1.195em;
 }
 
- /*=============== TICKET BAR ===============*/
- .tickets__bar{
-    margin-inline: 0;
-    padding-block: 0;
-  }
+.rotate__artist-dot-name i {
+  font-size: 0.5em;
+  padding-right: 0.3em;
+}
 
- .tickets__bar-container{
+/*=============== TICKET BAR ===============*/
+
+.tickets__bar {
+  margin-inline: 0;
+  padding-block: 0;
+}
+
+.tickets__bar-container {
   background-color: var(--first-color-light);
- }
+}
 
- .tickets__bar-content {
-    display: flex;
-    justify-content: center;
-    padding: 0.5em 0;
- }
+.tickets__bar-content {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 0;
+}
 
- .tickets-cta {
+.tickets-cta,
+.cta {  
+  color: hsla(0, 0%, 100%, 1);
+}
+
+.tickets-cta {
   padding: 0 0.2em;
-  color: hsla(0, 0%, 100%, 0.8);
   font-weight: var(--font-semi-bold);
   font-size: 1.53em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
- }
+}
 
- .cta {
-  color: hsla(0, 0%, 100%, 1);
- }
- /*=============== RADIO ===============*/
- .radio {
+/*=============== RADIO ===============*/
+
+.radio {
   margin-inline: 0;
   padding-block: 0;
-  }
+}
 
-  .radio__container {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1em 0.2em;
-  }
+.radio__container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em 0.2em;
+}
 
-  .radio__album {
-    background-color: var(--first-color-alt);
+.radio__album {
+  background-color: var(--first-color-alt);
+  width: 55px;
+  height: 55px;
+}
 
-    width: 55px;
-    height: 55px;
-  }
+.radio__album img {
+  width: 100%;
+}
 
-  .radio__content {
-    width: 9em;
-  }
+.radio__content {
+  width: 9em;
+}
 
-  .radio__content-song:hover,
-  .radio__content-artist:hover {
-    text-decoration: underline;
-  }
+/* Radio Content Styles */
+.radio__content-artist {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  padding-top: 0.3em;
+}
 
-  .radio__content-artist{
-    font-size: 0.9em;
-    text-transform: uppercase;
-    padding-top: 0.3em;
-  }
+.radio__content-song {
+  font-size: 1.1em;
+}
 
-  .radio__content-song {
-    font-size: 1.1em;
-  }
+.radio__content-song:hover,
+.radio__content-artist:hover {
+  text-decoration: underline;
+}
 
+/* Radio Button Styles */
+.skip-back,
+.skip-forward,
+.radio__volume,
+.play-pause {
+  cursor: pointer;
+}
 
-  .radio__play-buttons {
-    align-items: center;
-    display: flex;
-  }
+.skip-back,
+.skip-forward,
+.radio__volume {
+  font-size: 1.2em;
+}
 
-  .skip-back,
-  .skip-forward,
-  .radio__volume {
-    font-size: 1.2em;
-  }
+.skip-back:hover,
+.skip-forward:hover,
+.radio__volume:hover {
+  color: hsl(234, 95%, 60%);
+}
 
-  .skip-back:hover,
-  .skip-forward:hover,
-  .radio__volume:hover {
-    color: hsl(234, 95%, 60%);
-  }
+.play-pause {
+  font-size: 2em;
+  border-radius: 100%;
+  background-color: var(--first-color-alt);
+  padding: 0.2em;
+  margin: 0.2em;
+}
 
-  .play-pause {
-    font-size: 2em;
+.play-pause:hover {
+  background-color: hsl(234, 95%, 60%);
+}
 
-    border-radius: 100%;
-    background-color: var(--first-color-alt);
-    padding: 0.2em;
+.radio__volume {
+  display: flex;
+  align-items: center;
+}
 
-    margin: 0.2em;
-  }
+/*=============== UPCOMING EVENTS ===============*/
 
-  .play-pause:hover {
-    background-color: hsl(234, 95%, 60%);
-  }
-
-  .radio__volume {
-    display: flex;
-    align-items: center;
-  }
-
-  .skip-back,
-  .skip-forward,
-  .radio__volume,
-  .play-pause,
-  .radio__content-song,
-  .radio__content-artist  {
-    cursor: pointer;
-  }
-
- /*=============== UPCOMING EVENTS ===============*/
 .upcoming {
-    margin-inline: 0;
-    row-gap: 1rem;
-    padding-bottom: 1.5rem;
-    padding-block: 0;
+  margin-inline: 0;
+  row-gap: 1rem;
+  padding-bottom: 1.5rem;
+  padding-block: 0;
 }
 
 .event_title {
@@ -479,33 +485,31 @@
   padding-top: 1em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-
 }
 
+/* Upcoming Events Container Styles */
 .upcoming__container {
   background-image: url(/assets/img/raphael-schaller-zbUvPw1wUIw-unsplash.jpg);
   background-size: cover;
   height: auto;
   background-position: center;
   align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+}
 
+/* Individual Event Container Styles */
+.event__container {
   align-items: center;
   display: flex;
   flex-flow: column wrap;
 }
 
-.event__container {
-    align-items: center;
-    display: flex;
-    flex-flow: column wrap;
-
-}
 .event__content-info {
   background-color: hsla(0, 0%, 0%, 0.5);
   padding: 1.3em;
   margin: 1em;
   width: 90%;
-
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -524,6 +528,7 @@
   width: 100%;
 }
 
+/* Event Information Styles */
 .event__location {
   font-size: 1.5rem;
   text-align: center;
@@ -538,6 +543,7 @@
   padding-bottom: 0.3em;
 }
 
+/* Event CTA Styles */
 .event-cta {
   display: flex;
   flex-flow: row wrap;
@@ -550,7 +556,6 @@
   text-align: center;
   color: var(--white-color);
   margin: 10px 1em;
-
   transition: 0.2s;
 }
 
@@ -560,158 +565,155 @@
 }
 
 /*=============== ABOUT THE ARTISTS ===============*/
-.about_artist{
-    margin-inline: 0;
-    row-gap: 2.5rem;
-    padding: 1.5rem 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: -1;
+.about_artist {
+  margin-inline: 0;
+  row-gap: 2.5rem;
+  padding: 1.5rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: -1;
 }
 
+/* Artist Container Styles */
 .artist__container {
-    display: flex;
-    justify-content: center;
-    flex-flow: column wrap;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%;
+  padding-bottom: 2em;
+}
 
-    padding-bottom: 2em;
+/* Artist Slide Styles */
+.artist__slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 0.3em;
+}
+
+/* Thumbnail Pagination Styles */
+.thumbnails__pagination {
+  display: flex;
+  flex-flow: row;
+  line-height: 0;
+  height: 5em;
+  width: 5em;
+  margin: 0 4px;
+  overflow: hidden;
+
+  a {
+    display: block;
   }
 
-.artist__slide {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    margin-bottom: 0.3em;
-}
-
-.thumbnails__pagination {
-    display: flex;
-    flex-flow: row;
-    line-height: 0;
-
-    height: 5em;
-    width: 5em;
-
-    margin: 0 4px;
-    overflow: hidden;
-  
-    a {
-      display: block;
-    }
-    
-    img {
-      width: 30vmin;
-      height: 20vmin;
-      object-fit: cover;
-      object-position: top;
-    }
+  img {
+    width: 30vmin;
+    height: 20vmin;
+    object-fit: cover;
+    object-position: top;
+  }
 }
 
 .thumbnails__pagination:active,
 .thumbnails__pagination:hover {
-    box-shadow: -2px -1px 17px var(--first-color-light);
+  box-shadow: -2px -1px 17px var(--first-color-light);
 }
-  
+
+/* Slides Styles */
 .slides {
-    overflow: hidden;
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 45em;
+  overflow: hidden;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 45em;
 }
 
 .slides li:target {
-    z-index: 3;
-    
+  z-index: 3;
 }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
+
+/* Animations */
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
   }
-  
-  @keyframes hidden {
-    0% {
-      z-index: 2;
-    }
-    100% {
-      z-index: 2;
-    }
+  100% {
+    transform: translateX(0%);
   }
+}
 
-  .artist__content {
-    width: 100%;
-    height: 100%;
+@keyframes hidden {
+  0% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+  }
+}
 
-    background-color: var(--body-color);
-
-    padding-top: 0.5em;
-
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-flow: column wrap;
+/* Artist Content Styles */
+.artist__content {
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-color);
+  padding-top: 0.5em;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .artist__info {
-    width: 100%;
-    height: 100%;
-
-    padding: 1em;
-
-    align-items: center;
-    display: flex;
-    flex-flow: column;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
+/* Artist Profile Styles */
 .artist__profile {
-    width: 99%;
-    height: 99%;
-    justify-content: center;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-
-    box-shadow: -2px -1px 17px var(--first-color-light);
+  width: 99%;
+  height: 99%;
+  justify-content: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  box-shadow: -2px -1px 17px var(--first-color-light);
 }
 
+/* Artist Details Styles */
 .artist-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: row;
-
-    padding: 0.5em 1em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  padding: 0.5em 1em;
 }
 
 .a-left {
-    width: 10%;
-    display: flex;
-    flex-flow:column;
-    align-items: center;
-    margin-right: 0.8em;
+  width: 10%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-right: 0.8em;
 }
 
 .a-right {
-    width: 85%;
+  width: 85%;
 }
 
 .artist-img {
-    height: 20rem;
-    background-size: cover;
-    width: auto;
-    background-position: center;
+  height: 20rem;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
 }
 
 .artist-name {
@@ -723,36 +725,41 @@
   padding-top: 0.5em;
 }
 
-.artist__icon a{
+.artist__icon a {
   color: var(--white-color);
 }
 
 .artist-description {
-  padding-bottom: 1em;
+  padding-bottom:1em;
 }
+
 /*=============== SOCIAL MEDIA INTEGRATION ===============*/
+
 .social__integration {
   padding-top: 4em;
 }
+
 /*=============== SPOTIFY ===============*/
+
 .spotify__container {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .spotify__player-container {
   height: auto;
   display: flex;
-  flex-flow:column;
+  flex-flow: column;
   width: 95%;
-
-  padding:1em;
+  padding: 1em;
   border-radius: 10px;
   background-color: hsl(0, 0%, 25%);
 }
 
+/* Spotify Player Styles */
 .spotify__player {
   display: flex;
   flex-flow: row;
@@ -763,12 +770,10 @@
   width: 70px;
   height: 70px;
   border-radius: 20%;
-
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: var(--body-color);
 }
 
@@ -776,12 +781,14 @@
   width: 70%;
   height: auto;
 }
+
 .spotify-content {
   display: flex;
   flex-flow: row;
   padding-top: 0.5em;
 }
 
+/* Spotify Playlist Styles */
 .spotify_playlist-overall {
   width: 85%;
   padding-left: 0.8em;
@@ -801,18 +808,18 @@
   color: hsl(0, 0%, 80%);
 }
 
+/* Spotify Controls Styles */
 .spotify-controls {
   display: flex;
   flex-flow: row;
   height: fit-content;
-
   margin-left: 1em;
   margin-top: 0.5em;
   align-items: baseline;
 }
 
 .three-dots {
-  padding:0.2em;
+  padding: 0.2em;
   margin-left: 0.3em;
   margin-right: 0.3em;
   display: flex;
@@ -826,10 +833,8 @@
 .spotify-play {
   padding: 0.2em;
   border-radius: 100%;
-
   background-color: var(--white-color);
-
-  color:var(--first-color);
+  color: var(--first-color);
   font-size: 1.1em;
   font-weight: var(--font-semi-bold);
 }
@@ -839,7 +844,6 @@
   justify-content: right;
   position: absolute;
   right: 1.1em;
-
   font-size: 1.5em;
 }
 
@@ -847,21 +851,17 @@
   padding: 0.3em;
 }
 
+/* Spotify Active Playlist Styles */
 .spotify_playlist-active {
   display: flex;
   flex-flow: column;
 }
 
-.spotify-song:hover {
-  background-color: hsla(0, 0%, 0%, 0.5);
-}
-
+/* Spotify Song Styles */
 .spotify-song {
   display: flex;
   flex-flow: row;
-
   align-items: center;
-
   width: 90%;
   padding: 0.05em;
   border-radius: 3px;
@@ -870,302 +870,310 @@
 .song-icon {
   font-size: 0.80em;
   padding: 0.1em;
-
   width: 1em;
   display: flex;
   justify-content: center;
   margin-right: 0.5em;
 }
 
+.spotify-song:hover {
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+
 /*=============== GALLERY ===============*/
-.gallery{
-    display: flex;
-    flex-flow: row wrap;
-    gap: 0.1em;
-    width: 100%;
-    justify-content: center;
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.1em;
+  width: 100%;
+  justify-content: center;
 }
 
 .social__gallery {
-    width: 130px;
-    height: auto;
-}
-
-.social__gallery:hover {
-  cursor: pointer;
+  width: 130px;
+  height: auto;
+  cursor: pointer; /* Moved here for all gallery items */
 }
 
 /*=============== TWITTER ===============*/
-.twitter__container{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    padding: 1em 1em;
+
+.twitter__container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 1em 1em;
 }
 
 .twitter__post {
-    padding: 1.2em;
-}
-.twitter__post:hover{
-    background-color: #585858;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 0.5em;
+  border-radius: 5px;
+  cursor: pointer; /* Moved here for all posts */
+  transition: background-color 0.2s ease;
 }
 
+.twitter__post:hover {
+  background-color: #585858;
+}
+
+/* Twitter Post Styles */
 .twitter__post-header {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-.twitter__profile-img{
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-
-    background-color: rgb(0, 138, 216);
-    border: 1px solid var(--white-color);
-
-    margin: 0.2em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.twitter__profile-img {
+  border-radius: 100%;
+  background-color: rgb(0, 138, 216);
+  border: 1px solid var(--white-color);
+  margin: 0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+}
+.twitter__profile-img img {
+  width: 100%;
 }
 
 .twitter__username {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    align-items: center;
-    margin-left: 0.5em;
-    padding-right: 0.5em;
+  display: flex;
+  flex-flow: column;
+  margin-left: 0.5em;
+  justify-content: center;
+  column-gap: 0.2em;
 }
 
 .username {
-    text-align: right;
+  font-size: var(--small-font-size);
+  color:#d8d8d8;
 }
 
 .twitter-post {
-    width: 100%;
-    padding: 0.5em 0;
-    display: flex;
+  width: 100%;
+  padding: 0.5em 0;
+  display: flex;
 }
-
+.twitter__post-date {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
 .twitter__date,
 .twitter_dot {
-    padding-right: 0.4em;
-    color: #d8d8d8;
+  padding-right: 0.4em;
+  color: #d8d8d8;
 }
 
 .twitter_dot {
-    font-size: 0.3em;
-    padding-right: 1em;
+  font-size: 0.3em;
+  padding-right: 1em;
 }
 
-.twitter_icon-img a{
-    font-size: var(--h3-font-size);
-}
-.twitter_icon-img a:hover{
-    cursor: pointer;
-    
+.twitter_icon-img a {
+  font-size: var(--h3-font-size);
+  cursor: pointer;
 }
 
 .twitter__post-body {
-    padding: 0.5em 0;
+  padding: 0.5em 0;
 }
 
-.twitter__post-text{
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.twitter-post {
-    display: flex;
-    align-items: center;
+.twitter__post-text {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .hashtag {
-    font-weight: bold;
-    color: rgb(0, 138, 216);
-    cursor: pointer;
+  font-weight: bold;
+  color: rgb(0, 138, 216);
+  cursor: pointer;
 }
 
-.twitter__post-footer{
-    padding-top: 0.2em;
-    flex-direction: row;
-    display: flex;
+.twitter__post-footer {
+  padding-top: 0.2em;
+  flex-flow: column;
+  display: flex;
+  row-gap: 0.5em;
 }
 
 .twitter__footer-img {
-    cursor: pointer;
-    font-family: var(--body-font);
-    margin-right: 1em;
+  cursor: pointer;
+  font-family: var(--body-font);
+  margin-right: 1em;
+}
+.twitter__footer-stats {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  column-gap: 1em;
 }
 
 .post-separator {
-    margin: 0.4em 0;
-    width: 100%;
-    height: 1.4px;
-
-    background-color: #d8d8d8;
+  margin: 0.4em 0;
+  width: 100%;
+  height: 1.4px;
+  background-color: #d8d8d8;
 }
 
 .link {
-    color: rgb(0, 138, 216);
-    cursor: pointer;
+  color: rgb(0, 138, 216);
+  cursor: pointer;
 }
 
-.twitter_icon-img{
-    padding-left: 0.2em;
-    padding-bottom: 1em;
-    font-size: 1.5em;
-    color: #d8d8d8;
-    position: absolute;
+/* Twitter Icon Styles */
+.twitter_icon-img {
+  right: 2em;
+  padding-bottom: 1em;
+  font-size: 1.5em;
+  color: #d8d8d8;
+  position: absolute;
 }
 
 .twitter_icon-img:hover {
   color: rgb(0, 138, 216);
 }
 
- /*=============== NEWS ARTCLES ===============*/
- .news__articles {
+ /*=============== NEWS ARTICLES ===============*/
+
+.news__articles {
   padding-top: 0;
- }
+}
 
- .news__articles__container {
-    display: flex;
-    background-image: url(/assets/img/blue-red_stairs.jpg);
-    background-size: cover;
-    height: auto;
-    background-position: center;
-    row-gap: 1.2rem;
-    flex-flow: row wrap;
+/* News Articles Container Styles */
+.news__articles__container {
+  display: flex;
+  background-image: url(/assets/img/blue-red_stairs.jpg);
+  background-size: cover;
+  height: auto;
+  background-position: center;
+  row-gap: 1.2rem;
+  flex-flow: row wrap;
+  padding: 1.2em;
+}
 
-    padding: 1.2em;
- }
+/* News Articles Content Styles */
+.news__articles-content {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 1.5em;
+  justify-content: center;
+}
 
- .news__articles-content {
-    display: flex;
-    flex-flow: row wrap;
-    row-gap: 1.5em;
-    justify-content: center;
- }
+/* Individual Article Styles */
+.article {
+  padding: 1.5em;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  width: 360px;
+  display: flex;
+  flex-flow: wrap;
+  row-gap: 0.8em;
+}
 
- .article {
-    padding: 1.5em;
-    background-color: hsla(0, 0%, 0%, 0.7);
-    width: 360px;
- }
+.article__img,
+.article__img-sml {
+  width: 100%;
+  object-fit: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
- .article__img{
-    width: 100%;
-    height: 13em;
-    object-fit: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
- }
+.article__img {
+  height: 13em;
+}
 
- .article__read-more {
-    color: var(--white-color);
-    text-decoration: underline;
-    cursor: pointer;
-    text-align: right;
-    display: block;
-    width: 100%;
- }
- 
- .article__read-more:hover {
-    color: var(--first-color-light);
- }
+.article__img-sml {
+  height: 10em;
+}
 
- .article__content,
- .article {
-    display: flex;
-    flex-flow: wrap;
-    row-gap: 0.8em;
- }
+/* Article Content Styles */
+.article__content {
+  display: flex;
+  flex-flow: wrap;
+  row-gap: 0.8em;
+}
 
- .article__img-sml{
-    width: 100%;
-    height:10em;
-    object-fit: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
- }
+.article__read-more {
+  color: var(--white-color);
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: right;
+  display: block;
+  width: 100%;
 
-  /*=============== FOOTER ===============*/
-  .footer {
-    background-color: #000319;
-  }
+  transition: color 0.2s ease;
+}
 
-  .footer__container{
-    padding-block: 1.5rem;
-    text-align: center;
-    row-gap: 2rem;
-    flex-flow: wrap;
-  }
+.article__read-more:hover {
+  color: var(--first-color-light);
+}
 
-  .footer__content {
-    color: var(--body-color);
-  }
 
-  .footer__nav {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    gap: 1.5rem;
-  }
+/*=============== FOOTER ===============*/
 
-  .footer__logo {
-    display: flex;
-    justify-content: center;
-  }
+.footer {
+  background-color: #000319;
+}
 
-  .footer__logo img {
-    width: 16em;
-  }
+.footer__container {
+  padding-block: 1.5rem;
+  padding-bottom: 0;
+  text-align: center;
+  row-gap: 2rem;
+}
 
-  .footer-nav a {
-    color: var(--white-color);
-  }
+.footer__content,
+.footer-nav a {
+  color: var(--white-color);
+}
 
-  .footer-item {
-    padding: 0.5em 1em;
-  }
+.footer__nav {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
 
-  .footer__socials {
-    column-gap: 1rem;
-  }
+.footer__logo {
+  display: flex;
+  justify-content: center;
+}
 
-  .footer__social-link {
-    font-size: 1.5rem;
-    color: var(--white-color);
-  }
+.footer__logo img {
+  width: 16em;
+}
 
-  .footer__socials {
-    display:flex;
-    justify-content: center;
+.footer-item {
+  padding: 0.5em 1em;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.footer__social-link {
+  font-size: 1.5rem;
+  color: var(--white-color);
 }
 
 .footer__bottom {
-    padding: 1em;
-    width: 100%;
-    background-color: #000000;
-    display: flex;
-    justify-content: center;
-    
+  padding: 1em;
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
 }
 
 .footer__copy {
-    font-size: var(--smaller-font-size);
-    width: 33.33%;
-    text-align: center;
+  font-size: var(--smaller-font-size);
+  width: 33.33%;
+  text-align: center;
 }
 
-.footer__copy a{
-    color: var(--white-color);
-    cursor:pointer;
+.footer__copy a {
+  color: var(--white-color);
+  cursor: pointer;
 }
