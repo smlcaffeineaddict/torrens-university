@@ -1,0 +1,139 @@
+/*=============== CONTACT ===============*/
+.contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding-block: 0;
+}
+
+.contact__title {
+    background-image: url(/assets/img/blue-red_stairs.jpg);
+    background-size: cover;
+    height: auto;
+    background-position: center;
+    padding-inline: 1.1em;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.contact__container {
+    padding: 2rem 0;
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.contact__blurb {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 1em;
+    width: 100%;
+}
+
+.contact__info {
+    width: 60%;
+}
+
+.contact__details-title {
+    font-size: 1.5em;
+    padding-bottom: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.contact__details a {
+    color: var(--first-color-light);
+}
+
+.contact__button {
+    justify-self: center;
+}
+
+.contact__page {
+    padding-block: 1rem 4rem;
+}
+
+.contact__form{
+    position:relative;
+}
+
+.contact__box {
+    position: relative;
+    width: 100%;
+    height: 58px;
+}
+
+.contact__input {
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-color);
+    border: 3px solid var(--first-color-light);
+    padding: .5rem 1.5rem;
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    transition: border-color .4s, background-color .4s;
+}
+
+.contact__input:focus {
+    border-color: var(--title-color);
+}
+
+.contact__input:-webkit-autofill{
+    transition: background-color 6000s, color 6000s;
+}
+
+.contact__label {
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    background-color: var(--body-color);
+    padding: 8px;
+    transition: background-color .4s;
+}
+
+.contact__area {
+    height: 10rem;
+}
+
+.contact__area textarea{
+    resize: none;
+    padding-top: 1.25rem;
+}
+
+.contact__send {
+    cursor: pointer;
+    width: 15%;
+    justify-self: flex-end;
+    padding: 0.4em;
+    border: 2px solid var(--first-color-light);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5em;
+    transition: 0.3s;
+
+    background-color: var(--first-color);
+    color: var(--first-color-light);
+
+}
+
+.contact__send:hover {
+    color: var(--white-color);
+    background-color: var(--first-color-light);
+}
+
+.contact__message{
+    position: absolute;
+    bottom: 1.1rem;
+    left: 0;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}

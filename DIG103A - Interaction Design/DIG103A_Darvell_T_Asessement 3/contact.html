@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Elektrik Eel Festival | Home </title>
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+         <!--=============== CSS ===============-->
+         <link rel="stylesheet" href="assets/css/contact.css">
+         <link rel="stylesheet" href="assets/css/styles.css">
+		     <link rel="stylesheet" href="assets/css/media-queries.css">
+         <link rel="stylesheet" href="assets/css/lineup.css">
+
+         <!--=============== Website Icon ===============-->
+         <link rel="icon" type="image/x-icon" href="/assets/img/Elektrik-Eel-Logo/MONOGRAM LOGO.svg" />
+
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header">
+          <nav class="nav container">
+            <a href="/index.html" class="nav__logo">
+              <img src="assets/img/logo/MONOGRAM LOGO.svg" alt="Elektrik Eel Festival">
+            </a>
+      
+            <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="/404.html" class="nav__link">Upcoming</a></li>
+                <li class="nav__item"><a href="/lineup.html" class="nav__link">Line Up</a></li>
+                <li class="nav__item"><a href="https://www.ticketmaster.com.au/" target="_blank"
+                    class="nav__link tick-cta">Tickets</a></li>
+                <li class="nav__item"><a href="/contact.html" class="nav__link">Contact</a></li>
+              </ul>
+      
+              <!-- Close Button -->
+              <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+              </div>
+      
+              <!-- Nav Socials -->
+              <div class="nav__social">
+                <a href="" target="_blank" class="nav__social-link">
+                  <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="" target="_blank" class="nav__social-link">
+                  <i class="ri-instagram-line"></i>
+                </a>
+                <a href="" target="_blank" class="nav__social-link">
+                  <i class="ri-twitter-x-line"></i>
+                </a>
+                <a href="" target="_blank" class="nav__social-link">
+                  <i class="ri-youtube-line"></i>
+                </a>
+              </div>
+            </div>
+      
+            <div class="nav__right">
+              <!-- Search Button -->
+              <div class="nav__search" id="nav-search">
+                <input type="text" placeholder="Type Here..."/>
+                <i class="ri-search-line"></i>
+                <i class="ri-close-fill"></i>
+              </div>
+              <!-- Toggle Button -->
+              <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main>
+         <!--==================== CONTACT ====================-->
+         <section class="contact section">
+          <div class="contact__title">          
+            <h2 class="lineup__title"> Contact </h2>
+          </div>
+          <div class="contact__container container grid">
+            <div class="contact__blurb">
+              <p class="contact__words">Elektrik Eel Festival is electrifying like never before! 
+                We're more than just a festival - we're a vibrant community built 
+                on the electric pulse of EDM music, art, and underground culture.</p>
+                <p class="contact__words">
+                  We're pushing the boundaries of sound and light, expanding the genre, 
+                  and welcoming new energy into the fold. Get ready for an unparalleled 
+                  experience that will ignite all your senses. We're curating a mind-blowing 
+                  ineup of artists, visuals, and content that speaks directly to your EDM desires.
+                </p>
+                <p class="contact__words">
+                  Prepare to be charged up at ELEKTRIKEEL.com!
+                </p>
+            </div>
+            <div class="contact__blurb">
+              <div class="contact__info">
+                <h3 class="contact__details-title"> CONTACT</h3>
+                <p class="contact__details">Festival Inquiries: <a href="mailto:festivals@elektrikeel.com">festivals@elektrikeel.com</a></p>
+                <p class="contact__details">Artist Inquiries: <a href="mailto:artists@elektrikeel.com">artists@elektrikeel.com</a></p>
+                <p class="contact__details">Merch Inquiries: <a href="mailto:merch@elektrikeel.com">merch@elektrikeel.com</a></p>
+              </div>
+  
+              <div class="contact__info">
+                <h3 class="contact__details-title">stay connected!</h3>
+                <p class="contact__details">We'll keep you buzzing on social media! 
+                  Follow us on your favorite platforms for all the latest festival updates.</p>
+              </div>
+              
+              <div class="contact__info">
+                <h3 class="contact__details-title">Have something to say?</h3>
+                <p class="contact__details">Please fill out the form below to get in touch with the Elektrik Eel Festival team.</p>
+              </div>
+            </div>
+            
+            <div class="contact__page container grid">
+
+                <form action="" class="contact__form grid" id="contact-form">
+                    <div class="contact__group grid">
+                        <div class="contact__box">
+                            <input type="text" name="user_name" id="name" required placeholder="Write Your Name" class="contact__input">
+                            <label for="name" class="contact__label">Name</label>
+                        </div>
+                        
+                        <div class="contact__box">
+                            <input type="email" name="user_email" id="email" required placeholder="Write your Email" class="contact__input" required>
+                            <label for="email" class="contact__label">Email</label>
+                        </div>
+                    </div>
+                    <div class="contact__box">
+                      <select id="topic" name="subject_topic" class="contact__input" required>
+                        <option value="General Questions">General Questions</option>
+                        <option value="Merch Questions">Merch Questions</option>
+                        <option value="Advertising">Advertising</option>
+                      </select>
+                      <label for="topic" class="contact__label">Subject Topic</label>
+                    </div>
+                    <div class="contact__box contact__area">
+                            <textarea name="user_message"  id="message" required placeholder="Write Your Message" class="contact__input"></textarea>
+                            <label for="message" class="contact__label">Message</label>
+                    </div>
+                    
+                    <p class="contact__message" id="contact-message"></p>
+                    
+                    <button class="contact__send" type="submit">
+                      <i class="ri-send-plane-fill"></i>
+                      <span>Send</span>
+                    </div>
+                </form> 
+            </div>
+          </div>
+       </section>
+        </main>
+             <!--=============== FOOTER ===============-->
+        <footer class="footer">
+            <div class="footer__container container grid">
+              <div class="footer__content grid">
+                <div class="footer__nav">
+                  <a href="/index.html" class="footer__logo">
+                    <img src="/assets/img/Elektrik-Eel-Logo/Elektrik Eel - Landscape.svg" alt="Elektrik Eel Logo">
+                  </a>
+                  <div class="footer__socials">
+                    <a href="/" target="_blank" class="footer__social-link">
+                      <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="/" target="_blank" class="footer__social-link">
+                      <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="/" target="_blank" class="footer__social-link">
+                      <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="/" target="_blank" class="footer__social-link">
+                      <i class="ri-youtube-fill"></i>
+                    </a>
+                  </div>
+                  <ul class="nav__list footer-nav">
+                    <li class="nav__item footer-item">
+                      <a href="/" class="nav__link">Upcoming</a>
+                    </li>
+                    <li class="nav__item footer-item">
+                      <a href="/lineup.html" class="nav__link">Line Up</a>
+                    </li>
+                    <li class="nav__item footer-item">
+                      <a href="https://www.ticketmaster.com.au/" target="_blank" class="nav__link">Tickets</a>
+                    </li>
+                    <li class="nav__item footer-item">
+                      <a href="/contact.html" class="nav__link">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                
+              <div class="footer__bottom container">
+                <span class="footer__copy">© Elektrik Eel Festival 2024</span>
+                <span class="footer__copy">
+                  <a href="/" class="footer__link">Privacy Policy</a>
+                </span>
+                <span class="footer__copy">
+                  <a href="/" class="footer__link">Terms & Conditions</a>
+                </span>
+              </div>
+            </div>
+          </footer>
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+          <i class="ri-arrow-up-line"></i>
+        </a>
+        
+        <script src="/assets/js/main.js"></script>
+        <script src="/assets/js/search.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script src="assets/js/contact.js"></script>
+    </body>
+</html>

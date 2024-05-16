@@ -1,0 +1,966 @@
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+@media screen and (min-width: 350px) {
+
+    /* Radio Bar */
+    .track__art {
+        margin: 15px;
+        height: 45px;
+        width: 45px;
+    }
+
+    .buttons {
+        padding: 0 1em;
+    }
+
+    .details {
+        width: 60%;
+    }
+
+    .radio__player {
+        width: 100%;
+    }
+
+    .slider_container {
+        display: none;
+    }
+
+    /* Events */
+
+    .event-cta {
+        flex-flow: row;
+    }
+
+    .event__content-info {
+        padding: 1em;
+    }
+
+    .event__button {
+        padding: 0.5em;
+        width: 7.4em;
+    }
+
+    /* Artists */
+    .artists-container {
+        flex-flow: column;
+        width: 100%;
+        height: 680px;
+    }
+
+    .artists-nav {
+        justify-content: space-between;
+        align-items: center;
+        height: 55px;
+    }
+
+    .artists-nav,
+    .artists-items {
+        flex-flow: row;
+    }
+
+    .artists-arrow {
+        font-size: 1.5em;
+        padding: 0.3em 0.75em;
+        margin-left: -0.9em;
+    }
+
+    .prev,
+    .next {
+        transform: rotate(-90deg);
+    }
+
+    .next {
+        margin-left: -0.4em;
+    }
+
+    .artists-items {
+        height: 55px;
+        width: 80%;
+    }
+
+    .artists-item.active {
+        box-shadow: 0px 2px 17px 0px var(--first-color-light)
+    }
+
+    .artists-item {
+        width: 45px;
+        height: 45px;
+        margin: 0 2px;
+    }
+
+    .artists-slider {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    .artists-info,
+    .artists-nav {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    /* Music Player w/ List */
+    .player-2 {
+        width: 95%;
+        margin-top: 1em;
+        padding: 1em;
+    }
+
+    .player__logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .player-2 .player__details {
+        width: 80%;
+
+    }
+
+    .player__title {
+        margin-top: 1em;
+        font-size: 1.2em;
+    }
+
+    .header-sml {
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -1em;
+    }
+
+    .player__buttons {
+        padding: 0 0.5em;
+        margin-top: -1em;
+    }
+
+    .playpause__track {
+        padding-top: 0;
+    }
+
+    .track__list_sml {
+        height: 150px;
+    }
+
+    .track__info {
+        width: 75%;
+    }
+
+    /* Comment Section */
+    #comment__section {
+        width: 90%;
+    }
+
+    .display__comments {
+        height: 200px;
+    }
+
+    .user__profile {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    #user__info {
+        width: 100%;
+    }
+
+    #username,
+    #comment__text {
+        padding: 0.5rem 0.8em;
+        background-color: hsla(100, 100%, 100%, 0.2);
+        color: var(--white-color);
+        font-size: 0.8em;
+        border: none;
+        border-radius: 8px;
+    }
+
+    #comment__text::placeholder {
+        color: var(--white-color);
+    }
+
+    #comment__input {
+        padding-top: 0.7em;
+        width: 100%;
+    }
+
+    input[type="file"]::file-selector-button,
+    #save__user-info,
+    #submit__comment {
+        padding: 0.3em 0.7em;
+        color: var(--white-color);
+        background-color: hsla(100, 100%, 100%, 0.2);
+        border: none;
+    }
+
+    input[type="file"]::file-selector-button:hover,
+    #save__user-info:hover,
+    #submit__comment:hover {
+        background-color: var(--first-color);
+        transition: 0.5s;
+    }
+
+    .comment-content-col {
+        width: 85%;
+    }
+
+    /* News Article Section */
+    .news__articles__container,
+    .news__articles-content,
+    .article {
+        width: 100%;
+    }
+
+    /* Footer Section */
+    .footer-nav {
+        row-gap: 1em;
+    }
+
+    .footer-item .nav__link {
+        font-size: 1.2em;
+    }
+
+    /* Line Up Page */
+    .lineup-title__container {
+        height: 310px;
+    }
+    .lineup__dates__container {
+        flex-flow: column;
+        row-gap: 0.5em;
+        display: flex;
+        align-items: flex-start;
+    }
+    .modal__container {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .modal__content {
+       width: 90%;
+    }
+
+    .artist__modal-img {
+        height: 200px;
+    }
+
+    .modal__title {
+        font-size: 2.5em;
+        top: 150px;
+    }
+
+    .artist__modal-links {
+        flex-flow: column;
+    }
+
+    .artist__modal-socials {
+        width: 100%;
+    }
+
+    .track-list-container {
+        width: 100%;
+    }
+
+    .specific-track__item {
+        padding: 0.3em 1.5em;
+    }
+
+    .specific-track__item .track__number  {
+        width: 13%;
+    }
+    .modal {
+        width: 95%;
+    }
+    .artist__name{
+        font-size: 5.2em;
+    }
+
+    .contact__info {
+        width: 100%;
+    }
+
+    .contact__send {
+        width: 40%;
+    }
+}
+
+
+@media screen and (min-width: 420px) {
+    .artists-container {
+        height: 43.5em;
+    }
+
+    .next {
+        margin-left: 0.9em;
+    }
+
+    .change {
+        width: 16rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .artists-container {
+        height: 40.5em;
+    }
+
+    .player-2 {
+        width: 90%;
+    }
+
+    .artist__modal-img {
+        height: 220px;
+    }
+
+    .modal__title {
+        font-size: 3em;
+        top: 160px;
+    }
+
+}
+
+@media screen and (min-width: 660px) {
+
+    .event__content-info,
+    .player-2,
+    #comment__section {
+        width: 70%;
+    }
+
+
+    .artists-container,
+    .article {
+        width: 80%;
+    }
+
+    .artists-items {
+        width: 85%;
+    }
+
+    .next {
+        margin-left: -0.1em;
+    }
+
+    .small-article {
+        display: flex;
+        align-items: center;
+    }
+
+    .modal__title {
+        top: 210px;
+    }
+
+    .contact__send {
+        width: 30%;
+    }
+
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+    .nav__menu {
+        height: 45%;
+    }
+
+    .slider_container {
+        display: flex;
+        width: 45%;
+    }
+
+    .vol {
+        display: none;
+    }
+
+    .details {
+        width: 30%;
+    }
+
+    .event__content-info {
+        width: 45%;
+    }
+
+    .artists-container {
+        flex-flow: row;
+        height: 600px;
+    }
+
+    .artists-nav {
+        flex-flow: column;
+        height: 500px;
+        justify-content: center;
+        width: 15%;
+    }
+
+    .artists-carousel {
+        height: 100%;
+        justify-content: center;
+        display: flex;
+    }
+
+    .artists-items {
+        flex-flow: column;
+        row-gap: 1em;
+    }
+
+    .artists-arrow {
+        transform: rotate(0deg);
+    }
+
+    .next,
+    .prev {
+        margin-left: 0;
+    }
+
+    .active {
+        box-shadow: 0px 2px 17px 0px var(--first-color-light);
+    }
+
+    .player__track-list {
+        height: 200px;
+    }
+
+    .player-2 {
+        width: 70%;
+    }
+
+    .social__gallery {
+        width: 200px;
+        height: 200px;
+    }
+
+    .display__comments {
+        height: 400px;
+    }
+
+    .news__articles__container {
+        padding-bottom: 4em;
+    }
+
+    .article {
+        width: 95%;
+    }
+
+    .small-article {
+        width: 95%;
+        display: flex;
+        flex-flow: row;
+        column-gap: 1em;
+        justify-content: center;
+    }
+
+    .small-article .article {
+        width: 50%;
+    }
+
+    .footer__nav {
+        flex-flow: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer__logo {
+        width: 25%;
+        height: 100%;
+    }
+
+    .footer-nav {
+        flex-flow: row;
+    }
+
+    .footer-item {
+        font-size: 0.8em;
+    }
+
+    .footer__social-link {
+        font-size: 1em;
+    }
+
+    .modal__title {
+        width: 95%;
+        top: 280px;
+    }
+
+    .artist__modal-img {
+        height: 300px;
+    }
+
+    .artist__modal-links {
+        flex-flow: row;
+    }
+
+    .artist__modal-socials {
+        width: 25%;
+    }
+
+    .lineup-title__container  {
+        height: 250px;
+    }
+
+    .lineup__title {
+        height: 170px;
+    }
+
+    .lineup__dates__container {
+        flex-flow: row;
+    }
+    .contact__send {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 3000px;
+    }
+
+    .nav__menu {
+        width: 70%;
+        column-gap: 4em;
+        justify-content: flex-end;
+        align-content: center;
+        display: flex;
+    }
+
+    .nav__list {
+        flex-flow: row;
+        column-gap: 4em;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .nav__link {
+        font-size: 1em;
+    }
+
+    .nav__item {
+        align-self: center;
+    }
+
+    .change {
+        width: 14rem;
+    }
+
+    .tick-cta {
+        border: solid 2px var(--white-color);
+        padding: 0.4em 0.8em;
+        transition: color .4s;
+    }
+
+    .tick-cta:hover {
+        border: solid 2px var(--first-color-light);
+        color: var(--first-color-light);
+    }
+
+    .nav__social {
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+    .nav__social-link {
+        font-size: 1.1em;
+    }
+
+    .nav__close,
+    .nav__toggle {
+        display: none;
+    }
+
+    .hero__title {
+        height: 26em;
+    }
+
+    .hero__title img {
+        height: 9em;
+    }
+
+    .events__container {
+        padding-bottom: 2em;
+    }
+
+    .event__content-info {
+        width: 30%;
+    }
+
+    .artists-container {
+        width: 50%;
+    }
+
+    .player-2 {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .player__track-list {
+        height: 420px;
+    }
+
+    .artists-container {
+        height: 550px;
+    }
+
+    .gallery {
+        width: 85%;
+        justify-self: center;
+        padding-bottom: 1em;
+    }
+
+    .social__gallery {
+        width: 210px;
+        height: 210px;
+    }
+
+    #comment__section {
+        width: 55%;
+    }
+
+    .user__profile {
+        flex-flow: row;
+    }
+
+    .news__articles-content {
+        display: flex;
+        flex-flow: row;
+        column-gap: 1em;
+    }
+
+    .article {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        column-gap: 1em;
+    }
+
+    .small-article {
+        flex-flow: column;
+        width: 50%;
+    }
+
+    .small-article .article {
+        width: 100%;
+        display: flex;
+    }
+
+    .article__img-sml {
+        width: 100px;
+        height: auto;
+    }
+
+    .article__content {
+        width: 60%;
+        row-gap: 1em;
+        flex-flow: column;
+    }
+
+    .small-article .article__content {
+        width: 70%;
+        flex-flow: column;
+        row-gap: 0.5em;
+    }
+
+    .article__title-sml {
+        font-size: 0.9em;
+    }
+
+    .article__text-sml {
+        font-size: 0.7em;
+    }
+
+    .article__img {
+        width: 250px;
+        height: 100%;
+    }
+
+    .article__read-more {
+        font-size: 0.8em;
+    }
+
+    .article__title {
+        font-size: 1.2em;
+    }
+
+    .footer__nav {
+        column-gap: 5em;
+        padding-inline: 5em;
+    }
+
+    .footer-nav {
+        column-gap: 2em;
+
+    }
+
+    .track__number {
+        width: 15%;
+    }
+
+    .artist__modal-img {
+        height: 350px;
+    }
+
+    .modal__title {
+        top: 330px;
+    }
+
+    .artist__modal-links {
+        padding: 1em 15%;
+    }
+
+    .modal {
+        width: 80%;
+    }
+
+    .modal__content {
+        width: 80%;
+    }
+
+    .lineup__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .artist__name {
+        font-size: 6.5em;
+    }
+
+    .contact__page {
+        width: 80%;
+        justify-self: center;
+    }
+}
+
+/* For extra large devices */
+@media screen and (min-width: 1440px) {
+    .change {
+        width: 16rem;
+    }
+    .player-1 {
+        padding: 0 4em;
+    }
+
+    .vol {
+        display: flex;
+        width: 20%;
+    }
+
+    .artist-player {
+        padding: 2.5em 10em;
+    }
+
+    .artists-container {
+        width: 50%;
+        margin: 0 1em;
+    }
+
+    .player-2 {
+        width: 40%;
+    }
+
+    .social__integration {
+        padding: 2em 0;
+    }
+
+    .social__integration__container {
+        display: flex;
+        flex-flow: row;
+    }
+
+    .gallery {
+        width: 60%;
+    }
+
+    .social__gallery {
+        width: 250px;
+        height: 250px;
+
+    }
+
+    #comment__section {
+        width: 30%;
+    }
+
+    .user__profile {
+        flex-flow: column;
+    }
+
+    .article {
+        column-gap: 1.5em;
+    }
+
+    .article__content {
+        flex-flow: column;
+        width: 70%;
+        row-gap: 1em;
+    }
+
+    .small-article {
+        width: 50%;
+    }
+
+    .small-article .article__content {
+        row-gap: 0.5em;
+        flex-flow: column;
+    }
+
+    .article__img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .article__img-sml {
+        width: 110px;
+        height: 110px;
+    }
+
+    .article__title {
+        font-size: 1.4em;
+    }
+
+    .article__text {
+        font-size: 1em;
+    }
+
+    .modal {
+        width: 80%;
+    }
+
+    .modal__content {
+        width: 60%;
+    }
+
+    .lineup__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .artist__name {
+        font-size: 6.5em;
+    }
+
+    .contact__container {
+        width: 70%;
+    }
+    .contact__page{
+        width: 80%;
+    }
+
+    .contact__send {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .hero__title {
+        height: 30em;
+    }
+
+    .player-1 {
+        padding: 0 12em;
+    }
+
+    .details {
+        width: 20%;
+    }
+
+    .upcoming-events__container {
+        width: 70%;
+    }
+
+    .social__integration {
+        display: grid;
+    }
+
+    .social__integration__container {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #comment__section {
+        width: 25%;
+        margin: 0 2em;
+    }
+
+    .gallery {
+        width: 45%;
+        margin: 0 0 0 6em;
+    }
+
+    .news__articles__container {
+        display: grid;
+    }
+
+    .news__articles-content {
+        width: 90%;
+        justify-self: center;
+    }
+
+    .section__title {
+        justify-self: left;
+    }
+
+    .footer__content {
+        justify-self: center;
+    }
+
+    .footer__nav {
+        column-gap: 10em;
+    }
+
+    .artist__name {
+        font-size: 7em;
+    }
+    .contact__container {
+        width: 70%;
+        justify-self: center;
+    }
+    .contact__page {
+        width: 60%;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 2070px) {
+    .hero__title {
+        height: 34em;
+    }
+
+    .artists-container {
+        height: 650px;
+    }
+
+    .artists-info {
+        height: 90%;
+    }
+
+    .player-2 {
+        width: 30%;
+        height: 100%;
+        margin: 0 4em;
+    }
+
+    .player__track-list {
+        height: 380px;
+    }
+
+    .comment__section {
+        width: 10%;
+    }
+
+    .lineup__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal {
+        width: 80%;
+    }
+
+    .modal__content {
+        width: 50%;
+    }
+
+    .contact__container {
+        width: 50%;
+        justify-self: center;
+    }
+
+    .contact__page {
+        width: 50%;
+        justify-self: center;
+    }
+}
