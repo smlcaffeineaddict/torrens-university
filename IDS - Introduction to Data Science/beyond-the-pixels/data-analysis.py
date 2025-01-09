@@ -1,97 +1,101 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.pyplot as plt
 
-# Load the cleaned dataset from data-clean.py
-df = pd.read_csv('web_design_metrics_cleaned_extended.csv')
+# Load the cleaned dataset
+try:
+    df = pd.read_csv("web_design_metrics_cleaned.csv")
+    print("Dataset loaded successfully.")
+except Exception as e:
+    print(f"Error loading CSV: {e}")
+    exit()
 
-# Set up the plot style for better visualization
-sns.set(style="whitegrid")
+# 1. Plot Font Size Distribution
+def plot_font_size_distribution(df):
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['Font Size'], bins=20, kde=True)
+    plt.title('Font Size Distribution')
+    plt.xlabel('Font Size (px)')
+    plt.ylabel('Frequency')
+    plt.tight_layout()
+    plt.savefig('font_size_distribution.png')
+    plt.show()
 
-# 1. Descriptive statistics (already computed and stored in previous scripts)
-# df['Font Size', 'Line Height', etc. are already cleaned
+# 2. Plot Line Height Distribution
+def plot_line_height_distribution(df):
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['Line Height'], bins=20, kde=True)
+    plt.title('Line Height Distribution')
+    plt.xlabel('Line Height (px)')
+    plt.ylabel('Frequency')
+    plt.tight_layout()
+    plt.savefig('line_height_distribution.png')
+    plt.show()
 
-# 2. Correlation heatmap for numerical values
-plt.figure(figsize=(10, 8))
-correlation_matrix = df[['Font Size', 'Line Height', 'Content Width', 'Scroll Depth (%)',
-                         'Total Padding (px)', 'Total Margin (px)', 'Contrast Ratio', 'Whitespace (%)']].corr()
-sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-plt.title('Correlation Heatmap of Web Design Metrics')
-plt.tight_layout()
-plt.savefig("correlation_heatmap.png")
-plt.show()
+# 3. Plot Contrast Ratio
+def plot_contrast_ratio(df):
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['Contrast Ratio'], bins=20, kde=True)
+    plt.title('Contrast Ratio Distribution')
+    plt.xlabel('Contrast Ratio')
+    plt.ylabel('Frequency')
+    plt.tight_layout()
+    plt.savefig('contrast_ratio_distribution.png')
+    plt.show()
 
-# 3. Distribution of font sizes
-plt.figure(figsize=(8, 6))
-sns.histplot(df['Font Size'], kde=True, color='blue', bins=10)
-plt.title('Distribution of Font Size')
-plt.xlabel('Font Size (px)')
-plt.ylabel('Frequency')
-plt.tight_layout()
-plt.savefig("font_size_distribution.png")
-plt.show()
+# 4. Plot Scroll Depth vs. Content Width
+def plot_scroll_depth_vs_content_width(df):
+    plt.figure(figsize=(10, 6))
+    sns.scatterplot(x='Content Width', y='Scroll Depth (%)', data=df)
+    plt.title('Scroll Depth vs. Content Width')
+    plt.xlabel('Content Width (px)')
+    plt.ylabel('Scroll Depth (%)')
+    plt.tight_layout()
+    plt.savefig('scroll_depth_vs_content_width.png')
+    plt.show()
 
-# 4. Boxplot: Distribution of line height across different font sizes
-plt.figure(figsize=(8, 6))
-sns.boxplot(x='Font Size', y='Line Height', data=df, palette="Set2")
-plt.title('Line Height Distribution Across Font Sizes')
-plt.xlabel('Font Size (px)')
-plt.ylabel('Line Height (px)')
-plt.tight_layout()
-plt.savefig("line_height_distribution.png")
-plt.show()
+# 5. Plot Grid Layout vs. Scroll Depth
+def plot_grid_layout_vs_scroll_depth(df):
+    plt.figure(figsize=(10, 6))
+    sns.boxplot(x='Grid Layout', y='Scroll Depth (%)', data=df)
+    plt.title('Grid Layout vs. Scroll Depth')
+    plt.xlabel('Grid Layout')
+    plt.ylabel('Scroll Depth (%)')
+    plt.tight_layout()
+    plt.savefig('grid_layout_vs_scroll_depth.png')
+    plt.show()
 
-# 5. Contrast ratio vs. font size (Scatter plot)
-plt.figure(figsize=(8, 6))
-sns.scatterplot(x='Font Size', y='Contrast Ratio', data=df, color='green')
-plt.title('Contrast Ratio vs. Font Size')
-plt.xlabel('Font Size (px)')
-plt.ylabel('Contrast Ratio')
-plt.tight_layout()
-plt.savefig("contrast_vs_font_size.png")
-plt.show()
+# 6. Plot Correlation Heatmap
+def plot_correlation_heatmap(df):
+    # Select only numeric columns for correlation calculation
+    numeric_df = df.select_dtypes(include=['number'])
+    plt.figure(figsize=(12, 8))
+    corr = numeric_df.corr()  # Compute correlation only for numeric columns
+    sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
+    plt.title('Correlation Heatmap')
+    plt.tight_layout()
+    plt.savefig('correlation_heatmap.png')
+    plt.show()
 
-# 6. Bar plot: Grid Layout usage
-grid_layout_counts = df['Grid Layout'].value_counts()
-plt.figure(figsize=(8, 6))
-sns.barplot(x=grid_layout_counts.index, y=grid_layout_counts.values, palette="Blues")
-plt.title('Grid Layout Usage')
-plt.xlabel('Grid Layout (True/False)')
-plt.ylabel('Count')
-plt.tight_layout()
-plt.savefig("grid_layout_usage.png")
-plt.show()
+# 7. Plot Most Common Font Families
+def plot_most_common_font_families(df):
+    font_family_counts = df['Font Family'].value_counts().head(10)
+    plt.figure(figsize=(10, 6))
+    font_family_counts.plot(kind='bar')
+    plt.title('Top 10 Most Common Font Families')
+    plt.xlabel('Font Family')
+    plt.ylabel('Count')
+    plt.tight_layout()
+    plt.savefig('most_common_font_families.png')
+    plt.show()
 
-# 7. Whitespace distribution vs. content width (Scatter plot)
-plt.figure(figsize=(8, 6))
-sns.scatterplot(x='Content Width', y='Whitespace (%)', data=df, color='red')
-plt.title('Whitespace Distribution vs. Content Width')
-plt.xlabel('Content Width (px)')
-plt.ylabel('Whitespace (%)')
-plt.tight_layout()
-plt.savefig("whitespace_vs_content_width.png")
-plt.show()
+# Call the functions to generate the figures
+plot_font_size_distribution(df)
+plot_line_height_distribution(df)
+plot_contrast_ratio(df)
+plot_scroll_depth_vs_content_width(df)
+plot_grid_layout_vs_scroll_depth(df)
+plot_correlation_heatmap(df)
+plot_most_common_font_families(df)
 
-# 8. Scroll depth distribution (Histogram)
-plt.figure(figsize=(8, 6))
-sns.histplot(df['Scroll Depth (%)'], kde=True, color='purple', bins=10)
-plt.title('Scroll Depth Distribution')
-plt.xlabel('Scroll Depth (%)')
-plt.ylabel('Frequency')
-plt.tight_layout()
-plt.savefig("scroll_depth_distribution.png")
-plt.show()
-
-# 9. Pairplot for major metrics to understand relationships
-sns.pairplot(df[['Font Size', 'Line Height', 'Scroll Depth (%)', 'Contrast Ratio', 'Whitespace (%)']])
-plt.suptitle('Pairplot of Key Web Design Metrics', y=1.02)
-plt.tight_layout()
-plt.savefig("pairplot.png")
-plt.show()
-
-# Saving summary statistics as CSV for future reference
-summary_stats = df[['Font Size', 'Line Height', 'Content Width', 'Scroll Depth (%)',
-                    'Total Padding (px)', 'Total Margin (px)', 'Contrast Ratio', 'Whitespace (%)']].describe()
-summary_stats.to_csv("summary_statistics.csv")
-
-print("Data analysis completed and figures saved.")
+print("Data analysis and figure generation completed.")

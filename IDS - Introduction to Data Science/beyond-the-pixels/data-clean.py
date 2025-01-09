@@ -1,40 +1,61 @@
 import pandas as pd
 import re
 
-# Load the dataset collected by data-collection.py
-df = pd.read_csv("web_design_metrics_extended.csv")
+pd.set_option('future.no_silent_downcasting', True)
 
-# Function to clean non-numeric values (remove unwanted characters like 'px', 'auto', and parentheses)
-def clean_value(value):
-    # Remove unwanted characters like 'px', 'auto', parentheses, etc.
-    cleaned_value = re.sub(r'[^\d.]', '', str(value))  # Keep only digits and periods
-    return float(cleaned_value) if cleaned_value else 0  # Return 0 if cleaned_value is empty
+# Load the dataset
+try:
+    df = pd.read_csv("web_design_metrics.csv")
+    print("Dataset loaded successfully.")
+except Exception as e:
+    print(f"Error loading CSV: {e}")
+except FileNotFoundError:
+    print("Error: Dataset not found. Ensure 'web_design_metrics.csv' is in the current directory.")
+    exit()
 
-# Apply the clean_value function to the columns that require it
-df['Font Size'] = df['Font Size'].apply(clean_value)
-df['Line Height'] = df['Line Height'].apply(clean_value)
-df['Content Width'] = df['Content Width'].apply(clean_value)
-df['Scroll Depth (%)'] = df['Scroll Depth (%)'].apply(clean_value)
-df['Total Padding (px)'] = df['Total Padding (px)'].apply(clean_value)
-df['Total Margin (px)'] = df['Total Margin (px)'].apply(clean_value)
+# Function to clean numeric columns and round to three decimal places
+def clean_numeric_value(value, decimal_places=3):
+    """Clean and convert values to float, preserving decimal points."""
+    if isinstance(value, str):
+        # Remove any non-numeric characters except the decimal point
+        cleaned_value = re.sub(r'[^0-9.]', '', value)
+        try:
+            # Return the cleaned value as a float rounded to the specified decimal places
+            return round(float(cleaned_value), decimal_places) if cleaned_value else 0
+        except ValueError:
+            return 0  # Return 0 if the value can't be converted to a float
+    return round(value, decimal_places)  # Apply rounding for numeric values directly
 
-# Handle missing values (replace NULL or any non-numeric value with 0)
-df.fillna({
-    'Font Size': 0,
-    'Line Height': 0,
-    'Content Width': 0,
-    'Scroll Depth (%)': 0,
-    'Total Padding (px)': 0,
-    'Total Margin (px)': 0,
-    'Contrast Ratio': 0,
-    'Grid Layout': False,
-    'Whitespace (%)': 0
-}, inplace=True)
+# Function to clean string columns
+def clean_string_column(column):
+    """Clean string columns, strip leading/trailing spaces, and replace NaN with 'Unknown'."""
+    return column.fillna('Unknown').str.strip()
 
-# Handle the 'Contrast Ratio' column - ensure it's a valid float, default to 0 if invalid
-df['Contrast Ratio'] = pd.to_numeric(df['Contrast Ratio'], errors='coerce').fillna(0)
+# Apply cleaning operations
+try:
+    # Clean the numeric columns (e.g., Font Size, Line Height, Contrast Ratio, etc.)
+    df['Font Size'] = df['Font Size'].apply(clean_numeric_value)  # e.g., '14px' becomes 14
+    df['Line Height'] = df['Line Height'].apply(clean_numeric_value)  # e.g., '16.1px' becomes 16.1
+    df['Content Width'] = df['Content Width'].apply(clean_numeric_value)
+    df['Content Height'] = df['Content Height'].apply(clean_numeric_value)
+    df['Scroll Depth (%)'] = df['Scroll Depth (%)'].apply(clean_numeric_value)
+    df['Contrast Ratio'] = df['Contrast Ratio'].apply(clean_numeric_value)
+    df['Total Padding'] = df['Total Padding'].apply(clean_numeric_value)
 
-# Save the cleaned dataset to a new CSV file
-df.to_csv("web_design_metrics_cleaned_extended.csv", index=False)
+    # Clean the string columns (e.g., Font Family, Background Color, etc.)
+    df['Font Family'] = clean_string_column(df['Font Family'])
+    df['Background Color'] = clean_string_column(df['Background Color'])
+    df['Text Color'] = clean_string_column(df['Text Color'])
+    df['Grid Layout'] = df['Grid Layout'].fillna(False).astype(bool)  # Convert 'Grid Layout' to boolean
+    df['Error'] = clean_string_column(df['Error'])  # Clean the Error column as well
 
-print("Data cleaning completed and saved to 'web_design_metrics_cleaned_extended.csv'.")
+    print("Data cleaning completed.")
+
+except Exception as e:
+    print(f"An error occurred during cleaning: {e}")
+    exit()
+
+# Save the cleaned dataset
+cleaned_file_name = "web_design_metrics_cleaned.csv"
+df.to_csv(cleaned_file_name, index=False)
+print(f"Cleaned dataset saved as {cleaned_file_name}.")
